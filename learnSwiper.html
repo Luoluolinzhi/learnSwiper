@@ -13,11 +13,22 @@
  
     <script>
         window.onload = function() {
-            var swiper = new Swiper('.swiper-container', {               
-                loop:true,
+            var swiper = new Swiper('.swiper-container', {   
+                //循环            
+                // loop:true,
+
+                //滚动方向
+                direction : 'horizontal',
+                // 'vertical',纵向
+
+                //小手形状
+                grabCursor : true,
 
                 //自动播放
                 autoplay:true,
+                // autoplay:{
+                //     delay:200 速度
+                // },
 
                  //触摸时翻页
                 paginationClickable: true,
@@ -48,6 +59,11 @@
 
                 //鼠标
                 mousewheel: true,
+
+                //滚动条
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                },
             });
         };
     </script>
@@ -92,6 +108,7 @@
         <!-- 导航按钮 -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
     </div>
 </body>
 </html>
